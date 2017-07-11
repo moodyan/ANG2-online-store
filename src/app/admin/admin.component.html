@@ -1,4 +1,8 @@
-<div class="panel panel-default">
+<button (click)="showNewAlbumForm()" *ngIf="newAlbumButton">Add New Album</button>
+
+<button (click)="showNewMerchForm()" *ngIf="newMerchButton">Add New Merch</button>
+
+<div class="panel panel-default" *ngIf="newAlbumForm">
   <div class="panel-heading">
     <h3 class="panel-title">Add New Album to Inventory</h3>
   </div>
@@ -9,23 +13,53 @@
         <br>
         <input #newTitle>
       </div>
-
       <div>
         <label>Album Artist:</label>
         <br>
         <input #newArtist>
       </div>
-
+      <div>
+        <label>Album Price:</label>
+        <br>
+        <input #newAlbumPrice>
+      </div>
       <div>
         <label>Album Description:</label>
         <br>
-        <textarea #newDescription></textarea>
+        <textarea #newAlbumDescription></textarea>
       </div>
-      <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value); newTitle.value=''; newArtist.value=''; newDescription.value=''">Add</button>
+      <button (click)="submitAlbumForm(newTitle.value, newArtist.value, newAlbumDescription.value, newAlbumPrice.value); newTitle.value=''; newArtist.value=''; newAlbumDescription.value=''; newAlbumPrice.value=''" (click)="hideNewAlbumForm()">Add</button>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default" *ngIf="newMerchForm">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Item to Inventory</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Merch Item:</label>
+        <br>
+        <input #newItem>
+      </div>
+      <div>
+        <label>Item Price:</label>
+        <br>
+        <input #newMerchPrice>
+      </div>
+      <div>
+        <label>Item Description:</label>
+        <br>
+        <textarea #newMerchDescription></textarea>
+      </div>
+      <button (click)="submitMerchForm(newItem.value, newMerchDescription.value, newMerchPrice.value); newItem.value=''; newMerchDescription.value=''; newMerchPrice.value=''" (click)="hideNewMerchForm()">Add</button>
     </div>
   </div>
 </div>
 
 <div>
   <app-marketplace></app-marketplace>
+  <app-merch></app-merch>
 </div>

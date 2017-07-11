@@ -2,16 +2,29 @@
     "title": "Pulse",
     "artist": "Pink Floyd",
     "description": "A live  album by the English progressive rock band originally released in 1995, on the label EMI in the United Kingdom.",
-    "id": "1"
+    "price": 8
     }, {
     "title": "Dilate",
     "artist": "Ani DiFranco",
     "description": "Her highest-selling and most acclaimed album, released in 1996.",
-    "id": "2"
+    "price": 5
       }, {
     "title": "Axis Bold As Love",
     "artist": "Jimi Hendrix",
     "description": "Second studio album by the English-American band, released in 1967.",
-    "id": "3"
-  }]
+    "price": 12
+  }],
+  "merch": [{
+      "item": "T-Shirt",
+      "description": "We call this our mullet tee. It's simple in the front but all the party is on the back.",
+      "price": 25
+      }, {
+      "item": "Hat",
+      "description": "My eyes baby they're fixed on you in your snapback.",
+      "price": 15
+      }, {
+      "item": "Pin",
+      "description": "A cat pin that says 'You can't touch this.' What more could you want in life?",
+      "price": 3
+    }]
 }

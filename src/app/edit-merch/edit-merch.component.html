@@ -1,0 +1,21 @@
+<button (click)="showEditMerchForm()" *ngIf="editMerchButton">Edit this Merch</button>
+
+
+<div *ngIf="editMerchForm">
+  <h4>Edit Merch</h4>
+  <label>New Merch Item:</label>
+  <input [(ngModel)]="selectedMerch.item">
+  <br>
+
+  <label>New Merch Description:</label>
+  <input [(ngModel)]="selectedMerch.description">
+  <br>
+
+  <label>New Merch Price:</label>
+  <input [(ngModel)]="selectedMerch.price">
+  <br>
+
+  <button (click)="beginUpdatingMerch(selectedMerch)" (click)="hideEditMerchForm()">Update</button>
+  <hr>
+  <button (click)="beginDeletingMerch(selectedMerch)">Delete</button>
+</div>

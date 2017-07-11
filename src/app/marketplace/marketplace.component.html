@@ -1,8 +1,8 @@
-<h2>Marketplace</h2>
+<h2>Albums</h2>
 
 <div *ngFor="let album of albums | async"  class="panel panel-default">
-  <div class="panel-body">
-    <h3 (click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3>
+  <div class="panel-body clickable">
+    <h3 (click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}, ($){{album.price}}</h3>
     <div *ngIf="currentRoute === '/admin'">
       {{album.description}}
       <hr>

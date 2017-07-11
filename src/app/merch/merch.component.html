@@ -1,0 +1,12 @@
+<h2>Merchandise</h2>
+
+<div *ngFor="let merchandise of merch | async"  class="panel panel-default">
+  <div class="panel-body clickable">
+    <h3 (click)="goToDetailPage(merchandise)"><em>{{merchandise.item}}</em> ($){{merchandise.price}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{merchandise.description}}
+      <hr>
+      <app-edit-merch [selectedMerch]="merchandise"></app-edit-merch>
+    </div>
+  </div>
+</div>
