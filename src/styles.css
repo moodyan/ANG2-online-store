@@ -2,3 +2,9 @@ button:hover {
   background-color: white;
   border: 2px solid black;
 }
+
+.clickable:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+  cursor: hand;
+}

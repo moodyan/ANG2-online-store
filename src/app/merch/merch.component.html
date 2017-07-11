@@ -8,5 +8,9 @@
       <hr>
       <app-edit-merch [selectedMerch]="merchandise"></app-edit-merch>
     </div>
+    <div *ngIf="currentRoute === '/marketplace'">
+      <hr>
+      <button>Add To Cart</button>
+    </div>
   </div>
 </div>
