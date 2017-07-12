@@ -15,7 +15,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class MerchComponent implements OnInit {
   merch: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-  filterByPrice: number = 5;
+  filterByPrice: string = "all";
 
   constructor(private router: Router, private merchService: MerchService){}
 
@@ -27,7 +27,7 @@ export class MerchComponent implements OnInit {
     this.router.navigate(['merch', clickedMerch.$key]);
   };
 
-  // onPriceFilterChange(optionFromMenu) {
-  //   this.filterByPrice = optionFromMenu;
-  // }
+  onPriceFilterChange(optionFromMenu) {
+    this.filterByPrice = optionFromMenu;
+  }
 }

@@ -1,6 +1,12 @@
 <h2>Merchandise</h2>
 
-<div *ngFor="let merchandise of merch | async"  class="panel panel-default">
+<select (change)="onPriceFilterChange($event.target.value)">
+    <option value="all" selected>View All Categories</option>
+    <option value="cheap">$</option>
+    <option value="expensive">$$</option>
+</select>
+
+<div *ngFor="let merchandise of merch | async | price:filterByPrice"  class="panel panel-default">
   <div class="panel-body clickable">
     <h3 (click)="goToDetailPage(merchandise)"><em>{{merchandise.item}}</em> ($){{merchandise.price}}</h3>
     <div *ngIf="currentRoute === '/admin'">

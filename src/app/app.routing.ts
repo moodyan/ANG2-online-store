@@ -8,6 +8,7 @@ import { AlbumComponent }   from './album/album.component';
 import { AlbumDetailComponent }   from './album-detail/album-detail.component';
 import { MerchDetailComponent }   from './merch-detail/merch-detail.component';
 import { AdminComponent }   from './admin/admin.component';
+import { PriceFilterPipe } from './price-filter.pipe';
 
 const appRoutes: Routes = [
   {
