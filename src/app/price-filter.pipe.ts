@@ -1,12 +1,25 @@
-import { Pipe, PipeTransform } from '@angular/core';
-
-@Pipe({
-  name: 'priceFilter'
-})
-export class PriceFilterPipe implements PipeTransform {
-
-  transform(value: any, args?: any): any {
-    return null;
-  }
-
-}
+// import { Pipe, PipeTransform, EventEmitter } from '@angular/core';
+// import { Merch } from './merch.model';
+// import { Album } from './album.model';
+//
+// @Pipe({
+//   name: 'priceFilter',
+//   pure: false
+// })
+// export class PriceFilterPipe implements PipeTransform {
+//
+//   transform(input: Merch[], desiredPrice) {
+//     var output: Merch[] = [];
+//     for (var i = 0; i < input.length; i++) {
+//       if (input[i].price <= desiredPrice) {
+//         console.log(input[i].price);
+//         output.push(input[i]);
+//       }
+//     }
+//     return output;
+//   }
+//     if input[] {
+//       return input;
+//     }
+//   }
+// }

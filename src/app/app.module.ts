@@ -19,7 +19,8 @@ import { MerchComponent } from './merch/merch.component';
 import { MerchDetailComponent } from './merch-detail/merch-detail.component';
 import { EditMerchComponent } from './edit-merch/edit-merch.component';
 import { AlbumComponent } from './album/album.component';
-import { PriceFilterPipe } from './price-filter.pipe';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+// import { PriceFilterPipe } from './price-filter.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -41,7 +42,8 @@ export const firebaseConfig = {
     MerchDetailComponent,
     EditMerchComponent,
     AlbumComponent,
-    PriceFilterPipe
+    ShoppingCartComponent
+    // PriceFilterPipe
   ],
   imports: [
     BrowserModule,
